@@ -1,0 +1,28 @@
+#page-wrap {
+    margin: 50px;
+    height: 400px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tbody {
+    height: 200px;
+    overflow: auto;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: 3% center;
+}
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+}
