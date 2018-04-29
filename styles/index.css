@@ -41,10 +41,15 @@
     margin-bottom: 5px;
 }
 
+.text_wrapper{
+    color: #f8f8f5;
+}
+
 #wrapper {
     width: 100%;
     border: 1px solid black;
     overflow: auto; /* will contain if #first is longer than #second */
+    font-family: "Verdana", sans-serif;
 }
 #first {
     width: 40%;

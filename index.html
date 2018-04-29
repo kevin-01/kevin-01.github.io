@@ -53,18 +53,18 @@
 <div id="wrapper">
     <div id="first" data-step="3" data-intro="Here you can add yourself or a new user in order to see the prediction given by de recommender for you.">
         <form id="form_bottom_left" onSubmit="create_new_user(); return false;">
-            New User: <input id="new_usr" type="text"/>
+            <g class="text_wrapper">1) Enter your name: </g><input id="new_usr" type="text"/>
             <input id="btn_add_usr" type="button" value="Add User" onclick="create_new_user()"/>
         </form>
     </div>
     <div id="second" data-step="4" data-intro="Here you can choose to rate movies that are offered in the list. For this, just select a movie and its note. Then with the &quotAdd Rating&quot button, you will add your information to the database.<br><br> Furthermore, when you have noted all the movies you want to record, just press &quotRecommend&quot and the algorithm will work with your data added to the database.<br><br> At the End, you will have to go back to section 8 and look for your name in the list to finally see what is recommended to you">
         <form id="form_bottom_right" onSubmit="create_new_rating(); return false;">
-            Choose one Movie: <input id="add_movie" type="text" value="Character" list="db_movie_id"/>
+            <g class="text_wrapper">2) Select your favorite movie: </g><input id="add_movie" type="text" value="Character" list="db_movie_id"/>
             <datalist id="db_movie_id"></datalist>
-            Rate the Movie: <input id="rate" type="text" value="0" list="db_rating"/>
+            <g class="text_wrapper">3) Rate it: </g><input id="rate" type="text" value="0" list="db_rating"/>
             <datalist id="db_rating"></datalist>
-            <input id="btn_recommend_new_user" type="button" value="Recommend" onclick="recommend()"/>
-            <input id="btn_add_rating" type="button" value="Add Rating" onclick="create_new_rating()"/>
+            <input id="btn_recommend_new_user" type="button" value="Launch Algo" onclick="recommend()"/>
+            <input id="btn_add_rating" type="button" value="Add Your Note" onclick="create_new_rating()"/>
         </form>
 
     </div>
