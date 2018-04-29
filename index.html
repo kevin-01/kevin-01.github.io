@@ -1,1 +1,98 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCI recommender</title>
+
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="https://d3js.org/d3.v4.0.0-alpha.40.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/project.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
+
+    <script src="https://rawgit.com/chen0040/js-recommender/master/build/jsrecommender.min.js" type="application/javascript"></script>
+
+    <script>
+        function intro() {
+            var tour = introJs();
+            tour.setOption('tooltipPosition', 'auto');
+            tour.setOption('positionPrecedence', ['left', 'right', 'top', 'bottom']);
+            tour.setOption("skipLabel", "Exit");
+            tour.start();
+        }
+    </script>
+
+</head>
+<body onload = "startTimer()">
+<nav class="navbar navbar-default" data-step="1" data-intro="Welcome to the HCI visualizer!">
+    <div class="container-fluid"  style="padding:0">
+        <div class="navbar-header" style="margin:0">
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav" data-step="2" data-intro="Here you can navigate through the different pages.<br><br>You are currently in the &quotRecommender&quot section. Here you will find everything about the recommender system, how to see these data and how to have your own recommendations. You will also find an explanation on my matrix factorization and some fields to add you to the data. <br> <br>
+            In the &quotVisualization&quot section, you will be able to see the different results and also see for which person the recommender works best. <br> <br>
+            In the &quotDemo&quot section, you will find a video on matrix factorization as well as a tutorial video for this site.<br> <br> Finally in the &quotData&quot section, you will be able to see all the movies that are taken in the database in order to make recommendations.">
+            <li><a href="index.html">Movie Recommender</a></li>
+            <li><a href="visualization.html">Visualization</a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="data.html">Data</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="header">
+    <a class="btn" href="javascript:void(0);" onclick="javascript:intro();">Help</a>
+    <h1> Movie Recommender System </h1>
+</div>
+
+<div id="wrapper">
+    <div id="first" data-step="3" data-intro="Here you can add yourself or a new user in order to see the prediction given by de recommender for you.">
+        <form id="form_bottom_left" onSubmit="create_new_user(); return false;">
+            New User: <input id="new_usr" type="text"/>
+            <input id="btn_add_usr" type="button" value="Add User" onclick="create_new_user()"/>
+        </form>
+    </div>
+    <div id="second" data-step="4" data-intro="Here you can choose to rate movies that are offered in the list. For this, just select a movie and its note. Then with the &quotAdd Rating&quot button, you will add your information to the database.<br><br> Furthermore, when you have noted all the movies you want to record, just press &quotRecommend&quot and the algorithm will work with your data added to the database.<br><br> At the End, you will have to go back to section 8 and look for your name in the list to finally see what is recommended to you">
+        <form id="form_bottom_right" onSubmit="create_new_rating(); return false;">
+            Choose one Movie: <input id="add_movie" type="text" value="Character" list="db_movie_id"/>
+            <datalist id="db_movie_id"></datalist>
+            Rate the Movie: <input id="rate" type="text" value="0" list="db_rating"/>
+            <datalist id="db_rating"></datalist>
+            <input id="btn_recommend_new_user" type="button" value="Recommend" onclick="recommend()"/>
+            <input id="btn_add_rating" type="button" value="Add Rating" onclick="create_new_rating()"/>
+        </form>
+
+    </div>
+</div>
+
+<div class="result2" data-step="5" data-intro="In this section, you can see how a matrix factorization is going and how that can help in predicting the ranking for movies.<br><br> Buttons &quotprevious&quot and &quotnext&quot allow you to go back to different images if you want to see them again">
+    <img id="img" src="/data/Matrix_facto.png"/>
+    <button type="button" class="img_btn" onclick="displayPreviousImage()">Previous</button>
+    <button type="button" class="img_btn" onclick="displayNextImage()">Next</button>
+</div>
+
+<script type = "text/javascript" src="scripts/index.js"></script>
+
+<div class="result">
+    <div id="matrix" data-step="6" data-intro="This Matrix represents a small fraction of the users rating. On each column you can see a different movie and on each row it's an anonymous user. By hovering over the elements of the matrix, you will see the name of the movie and the user."></div>
+    <div id="recommender" data-step="7" data-intro="In this section, we will have what the recommend advises us to watch. It will specify for a user a movie with its prediction in order to help the user to make appropriate choices."></div>
+    <div id="bouton_recommender" data-step="8" data-intro="Here you can choose a user from the suggested list, and by clicking on the button, you will see the recommendation for some proposed movie.">
+        <form id="form_top" onSubmit="show_recommendation(); return false;">
+            User: <input id="btn_field" type="text" list="db_user_id"/>
+            <datalist id="db_user_id"></datalist>
+            <input id="btn_recommend" type="button" value="Show Recommendation" onclick="show_recommendation()"/>
+        </form>
+    </div>
+</div>
+
+
+<div class="end">
+</div>
+
+</body>
+</html>

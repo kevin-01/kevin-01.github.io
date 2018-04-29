@@ -1,0 +1,236 @@
+.btn {
+    width: 70px;
+    position: absolute;
+    left: 10px;
+    margin: auto 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 2px;
+    margin: 5px;
+}
+
+.header{
+    margin-bottom: 40px;
+}
+
+.result {
+    text-align: center;
+    width: 100%;
+    height: 415px;
+    border: 1px solid black;
+//margin-bottom: 5px;
+
+}
+.result2 {
+    text-align: center;
+    overflow: auto;
+    width: 100%;
+    height: 415px;
+    border: 1px solid black;
+//margin-bottom: 5px;
+
+}
+.img_btn{
+    float: left;
+
+}
+#new_user {
+    width: 50%;
+    border: 1px solid black;
+    overflow: auto; /* will contain if #first is longer than #second */
+    margin-bottom: 5px;
+}
+
+#wrapper {
+    width: 100%;
+    border: 1px solid black;
+    overflow: auto; /* will contain if #first is longer than #second */
+}
+#first {
+    width: 40%;
+    float:left; /* add this */
+    border: 1px solid black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#second {
+    border: 1px solid black;
+    text-align: center;
+    overflow: auto; /* if you don't want #second to wrap below #first */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#matrix{
+    width: 50%;
+    height: 100%;
+    border: 2px solid dimgray;
+    float:left;
+    overflow: auto;
+
+}
+#recommender{
+    height: 94%;
+    width: 50%;
+    border: 1px solid black;
+    overflow: auto;
+    background-color: #665f62 ;
+    text-align: left;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+}
+#bouton_recommender{
+    width: 50%;
+    float:right;
+
+}
+#btn_recommend{
+    height: 24px;
+    margin: 1px;
+    color: white;
+    float:right;
+    border: none;
+    background-color: #ff9200;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+}
+#btn_recommend:hover {
+    background: #f46500;
+}
+#form_top{
+    background-color: gray;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    padding-right: 1px;
+}
+#form_bottom_left{
+    background-color: gray;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 1px;
+}
+#form_bottom_right{
+    background-color: gray;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 1px;
+}
+
+#new_usr {
+    width: 110px;
+}
+
+#btn_add_usr{
+    height: 24px;
+    width: 100px;
+    float:right;
+    margin: 1px;
+    color: white;
+    border: none;
+    background-color: #0093b7;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+}
+#btn_add_usr:hover {
+    background: #066781;
+}
+#add_movie {
+    width: 90px;
+}
+#rate {
+    width: 40px;
+}
+
+#btn_add_rating{
+    height: 24px;
+    margin: 1px;
+    float:right;
+    color: white;
+    border: none;
+    background-color: #0093b7;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+}
+#btn_add_rating:hover {
+    background: #066781;
+}
+
+#btn_recommend_new_user{
+    height: 24px;
+    margin: 1px;
+    float:right;
+    color: white;
+    border: none;
+    background-color: #ff9200;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+}
+#btn_recommend_new_user:hover {
+    background: #f46500;
+}
+
+.img_btn{
+    margin-right: 20px;
+    border: 1px solid red;
+    margin: 1px;
+    float:left;
+    color: white;
+    border: none;
+    background-color: #329c98;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+}
+.img_btn:hover {
+    background-color: #16675e;
+}
+
+.end{
+    height: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#btn_field{
+    overflow-y:auto;
+    height: 26px;
+}
+datalist{
+    overflow-y:auto;
+}
+
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: white;
+}
+th {
+    background: lightslategray;
+    color: white;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: 3% center;
+}
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    /*text-align: left;*/
+}
+th{
+    text-align: left;
+}
+
+th.des:after {
+    content: "\21E9";
+}
+
+th.aes:after {
+    content: "\21E7";
+}
