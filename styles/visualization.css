@@ -35,7 +35,7 @@
     top: 1380px;
 }
 
-.button_vis {
+.vis_delimiter {
     position: relative;
     width: 100%;
     float:left; /* add this */
