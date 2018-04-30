@@ -22,7 +22,7 @@ var add_movie = 0;
 
 function do_svg() {
 
-    d3.csv("/HCI/template/data/data_vis.csv", function(d) {
+    d3.csv("/data/data_vis.csv", function(d) {
         var user = d.id.split(".")[1];
         var movie = d.id.split(".")[0];
         d.value = +d.value;
@@ -267,7 +267,7 @@ var pack2 = d3.pack()
     .size([diameter - margin, diameter - margin])
     .padding(2);
 
-d3.json("/HCI/template/data/result.json", function(error, root) {
+d3.json("/data/result.json", function(error, root) {
     if (error) throw error;
 
     root = d3.hierarchy(root)
@@ -396,7 +396,7 @@ var simulation = d3.forceSimulation()
     .force("x", d3.forceX().strength(0.1))
     .force("y", d3.forceY().strength(0.1));
 
-d3.json("/HCI/template/data/vis2.json", function(error, graph) {
+d3.json("/data/vis2.json", function(error, graph) {
     if (error) throw error;
 
     var link = svg3.append("g")
