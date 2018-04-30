@@ -17,7 +17,7 @@
 #legend{
     position: absolute;
     left: 900px;
-    top: 1310px;
+    top: 1360px;
     text-align: left;
 }
 .svg_legend{
@@ -32,7 +32,7 @@
 .avg{
     position: absolute;
     left: 10px;
-    top: 1310px;
+    top: 1360px;
 }
 
 .button_vis {
