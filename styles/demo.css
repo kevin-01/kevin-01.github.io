@@ -1,6 +1,7 @@
 iframe{
     width: 100%;
     height: 315px;
+    align: middle;
 }
 
 div.demo {
