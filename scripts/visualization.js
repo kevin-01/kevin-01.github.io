@@ -238,7 +238,7 @@ d3.json("/data/result.json", function(error, root) {
         .data(nodes)
         .enter().append("circle")
         .attr("class", function(d) { return d.parent ? d.children ? "node2" : "node2 node2--leaf" : "node2 node2--root"; })
-        .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+        .style("fill", function(d) {console.log(d); return d.children ? color(d.depth) : null; })
         .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
     var text = g.selectAll("text")
