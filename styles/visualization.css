@@ -17,7 +17,8 @@
 #legend{
     position: absolute;
     left: 900px;
-    top: 1360px;
+    top: 1310px;
+    text-align: left;
 }
 .svg_legend{
     width: 10px;
@@ -31,16 +32,10 @@
 .avg{
     position: absolute;
     left: 10px;
-    top: 1360px;
+    top: 1310px;
 }
 
-#legend{
-    position: absolute;
-    right: 10px;
-    text-align: left;
-}
-
-#button_vis {
+.button_vis {
     position: relative;
     width: 100%;
     float:left; /* add this */
@@ -48,6 +43,8 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     display: block;
+    background-color: gray;
+    color:#f8f8f5;
 }
 
 #form_bottom{
@@ -99,4 +96,14 @@
 .node2--root,
 .node2--leaf {
     pointer-events: none;
+}
+
+.links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
 }

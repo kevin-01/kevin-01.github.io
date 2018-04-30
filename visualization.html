@@ -52,25 +52,27 @@
 </div>
 
 
-
 <svg class="svg_second" width="1200" height="1200" text-anchor="middle" data-step="3" data-intro="In this section, you can see the results that the recommendation found. The recommender gives more or less good results depending on the users. In the center, we find the users for whom the recommentation is the most advisable (for some movies). In the edges, are the users for whom the proposed films are not recommended. Click on it to see the movies and it will also update the visualisation below."></svg>
-<div id="button_vis" style="z-index: 2;" data-step="4" data-intro="Here you can select different users in order to better see their recommendation too.">
+<div class="button_vis" style="z-index: 2;" data-step="4" data-intro="Here you can select different users in order to better see their recommendation too.">
     <form id="form_bottom" onSubmit="choose_user(); return false;">
-        User: <input id="choose_usr" type="text" value="1488844" list="db_users"/>
+        User: <input id="choose_usr" type="text" value="1488844" list="db_users" style="color: black"/>
         <datalist id="db_users"></datalist>
         <input id="btn_choose_usr" type="button" value="Visualize" onclick="choose_user()"/>
+        <g style="margin-left: 150px">More information about anonymous users movies</g>
     </form>
 </div>
 <div id="svg_user" height="800" width="100%"  style="z-index: -2;">
-    <div class="avg" data-step="6" data-intro="By clicking on each Bubble, you will see the result of the recommendation and a global note on the movie based on all the users">
-        <span style="text-decoration:underline"> Global Note:<br> </span>
-    </div>
-    <div id="legend" data-step="7" data-intro="Here it's just a Legend about The color of the Bubbles"></div>
+    <div class="avg"><span style="text-decoration:underline"> Global Note:<br> </span></div>
+    <div id="legend"></div>
     <svg class="svg_first" width="1200" height="800" font-family="sans-serif" font-size="10" text-anchor="middle" data-step="5" data-intro="In this section, you will be able to see more precisely the results of the movies found for each user. The different colors tell you the different values ​​found and if you leave your cursor on a circle, you will have all the information about it."></svg>
 </div>
 
+<div class="button_vis" style="z-index: 2;" data-step="4" data-intro="Here you can select different users in order to better see their recommendation too.">Similarities between Movies</div>
+
+<svg class="svg_third" width="1200" height="500" font-family="sans-serif" font-size="10" text-anchor="middle" data-step="5" data-intro="In this section, you will be able to see more precisely the results of the movies found for each user. The different colors tell you the different values ​​found and if you leave your cursor on a circle, you will have all the information about it."></svg>
 
 
-<script type = "text/javascript" src="/scripts/visualization.js"></script>
+
+<script type = "text/javascript" src="/HCI/template/scripts/visualization.js"></script>
 
 </body>
