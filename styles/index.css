@@ -78,7 +78,7 @@
     width: 50%;
     border: 1px solid black;
     overflow: auto;
-    background-color: #665f62 ;
+    background-color: #8c8c8c ;
     text-align: left;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -105,20 +105,20 @@
 }
 #form_top{
     color:#f8f8f5;
-    background-color: gray;
+    background-color: #8c8c8c;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 5px;
     padding-right: 1px;
 }
 #form_bottom_left{
-    background-color: gray;
+    background-color: #8c8c8c;
     text-align: left;
     padding-left: 5px;
     padding-right: 1px;
 }
 #form_bottom_right{
-    background-color: gray;
+    background-color: #8c8c8c;
     text-align: left;
     padding-left: 5px;
     padding-right: 1px;

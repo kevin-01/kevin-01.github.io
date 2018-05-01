@@ -390,6 +390,7 @@ var svg3 = d3.select(".svg_third"),
 var color = [ "#8d0a15", "#f46500","#ffce00", "#ADFF2F", "#4d7701"]
 
 var simulation = d3.forceSimulation()
+    //.force("link", d3.forceLink().id(function(d) { return d.id; }).strength(0.1).distance(30))
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
     .force("charge", d3.forceManyBody().strength(-50))
     .force("center", d3.forceCenter(width / 2, height / 2))
