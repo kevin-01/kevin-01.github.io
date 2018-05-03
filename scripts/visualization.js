@@ -129,7 +129,7 @@ function do_svg() {
 
                     var keys = Object.keys(dico_circle_movies);
                     for (var i = 0; i < keys.length; i++) {
-                        avg.append("g").attr("class", "movie_avg").attr("style","font: 11px arial, sans-serif").html(keys[i]  + " {Note: " + dico_circle_movies[keys[i]][0].toFixed(2) + " AVG: " +  dico_circle_movies[keys[i]][1].toFixed(2) + "}<br>");
+                        avg.append("g").attr("class", "movie_avg").attr("style","font: 11px arial, sans-serif").html(keys[i]  + " {Note: " + dico_circle_movies[keys[i]][0].toFixed(2) + ", AVG: " +  dico_circle_movies[keys[i]][1].toFixed(2) + "}<br>");
                     }
                 }else{
                     dico_circle_movies[movie_name] = [];
