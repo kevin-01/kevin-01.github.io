@@ -162,6 +162,7 @@ function do_svg() {
     });
 
     d3.selectAll(".movie_avg").remove();
+    dico_circle_movies = {};
 
 }
 

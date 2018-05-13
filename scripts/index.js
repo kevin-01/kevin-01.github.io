@@ -151,8 +151,8 @@ var images = [], x = -1;
 images[0] = "/data/mf2.png";
 images[1] = "/data/mf1.png";
 images[2] = "/data/cat_matrix.gif";
-images[3] = "/data/computer_angry.gif";
-images[4] = "/data/Matrix_facto.png";
+//images[3] = "/data/computer_angry.gif";
+images[3] = "/data/Matrix_facto.png";
 
 
 
